@@ -4,8 +4,12 @@ const express = require("express");
 const app = new express();
 const port = process.env.PORT ||8080;
 
+
 const moviesRoutes = require("./routes/movies/movies");
 const bookRoutes = require("./routess/book/book"); 
+const db = require("./DB/index");
+
+db();
 
 app.use(express.json());
 
